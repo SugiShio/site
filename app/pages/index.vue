@@ -1,6 +1,6 @@
 <template lang="pug">
-section
-  | Under Constructing...
+header
+  | shoko-sugito.work
 </template>
 
 <script>
