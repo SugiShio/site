@@ -3,6 +3,9 @@ import pkg from './package'
 export default {
   mode: 'universal',
   srcDir: 'app',
+  router: {
+    middleware: ['auth']
+  },
 
   /*
    ** Headers of the page
