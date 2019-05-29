@@ -17,5 +17,35 @@ export default {
       commit('setSignout')
       cookies.remove('credential')
     }
+  },
+
+  async getIndex({}, { collection }) {
+    let data = []
+    await firebase
+      .firestore()
+      .collection('articles')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          data.push(doc.data())
+        })
+      })
+      .catch(function(error) {
+        console.error('Error getting documents: ', error)
+      })
+    return data
+  },
+
+  create({}, { collection, id, data }) {
+    firebase
+      .firestore()
+      .collection(collection)
+      .doc(id)
+      .set(data)
+      .then(() => {})
+      .catch(e => {
+        // todo
+        return e
+      })
   }
 }

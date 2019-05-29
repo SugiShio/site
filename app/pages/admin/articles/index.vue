@@ -11,20 +11,15 @@ import firebase from '~/plugins/firebase'
 export default {
   layout: 'admin',
   data() {
-    let data = []
-    firebase
-      .firestore()
-      .collection('articles')
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          data.push({ id: doc.id, ...doc.data() })
-        })
-      })
-      .catch(function(error) {
-        console.error('Error getting documents: ', error)
-      })
-    return { data }
+    return {
+      data: []
+    }
+  },
+  async created() {
+    const data = await this.$store.dispatch('getIndex', {
+      collection: 'articles'
+    })
+    this.data = data
   }
 }
 </script>

@@ -28,25 +28,17 @@ export default {
     }
   },
   methods: {
-    create() {
-      firebase
-        .firestore()
-        .collection('articles')
-        .doc(this.title)
-        .set({
+    async create() {
+      const data = await this.$store.dispatch('create', {
+        collection: 'articles',
+        id: this.title,
+        data: {
           title: this.title,
           body: this.body,
           createdAt: new Date(),
           updatedAt: new Date()
-        })
-        .then(data => {
-          console.log(data)
-          // this.$router.push('/admin/profile')
-        })
-        .catch(e => {
-          console.error(e)
-          // Failed!
-        })
+        }
+      })
     }
   }
 }
