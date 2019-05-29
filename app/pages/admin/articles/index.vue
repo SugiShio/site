@@ -1,5 +1,8 @@
 <template lang="pug">
-el-table(:data='data')
+el-table(
+v-loading='isLoading'
+:data='data'
+)
   el-table-column(
   prop='title'
   label='タイトル'
@@ -12,7 +15,8 @@ export default {
   layout: 'admin',
   data() {
     return {
-      data: []
+      data: [],
+      isLoading: true
     }
   },
   async created() {
@@ -20,6 +24,7 @@ export default {
       collection: 'articles'
     })
     this.data = data
+    this.isLoading = false
   }
 }
 </script>
