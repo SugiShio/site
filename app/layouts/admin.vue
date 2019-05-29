@@ -9,6 +9,8 @@ el-container
     | {{ label }}
   el-container
     el-aside
+      el-menu(router)
+        el-menu-item(index='admin/articles') 記事
     el-main
       nuxt
 </template>
