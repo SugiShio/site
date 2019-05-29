@@ -1,19 +1,21 @@
 <template lang="pug">
-div
   el-card(
   header='ログイン'
   shadow='never'
   )
     el-form(label-width='120px')
-      el-form-item(label='email')
+      el-form-item(label='メールアドレス')
         el-input(v-model='email')
-      el-form-item(label='password')
-        el-input(v-model='password')
+      el-form-item(label='パスワード')
+        el-input(
+        v-model='password'
+        show-password
+        )
       el-form-item
         el-button(
         type='primary'
         size='small'
-        @click='login'
+        @click='signin'
         ) ログイン
 </template>
 
@@ -27,28 +29,19 @@ export default {
       password: ''
     }
   },
-  mounted() {
-    firebase.auth().onAuthStateChanged(user => {})
+  created() {
+    firebase.auth().onAuthStateChanged(user => {
+      this.$store.dispatch('setUser', { user })
+    })
   },
   methods: {
-    login() {
+    signin() {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then(user => {
-          console.log(user)
-          // ログインしたら飛ぶページを指定
-          // this.$router.push("/member-page")
+          this.$router.push('/admin')
         })
-        .catch(error => {
-          alert(error)
-        })
-    },
-    logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {})
         .catch(error => {
           alert(error)
         })

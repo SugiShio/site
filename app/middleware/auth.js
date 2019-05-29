@@ -1,7 +1,6 @@
 import Cookies from 'universal-cookie'
 
 export default ({ req, route, redirect }) => {
-  console.log(route.name)
   if (['/'].includes(route.path)) return
 
   const cookies = req ? new Cookies(req.headers.cookie) : new Cookies()
