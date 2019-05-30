@@ -23,7 +23,8 @@ export default {
     let data = []
     await firebase
       .firestore()
-      .collection('articles')
+      .collection(collection)
+      .orderBy('createdAt', 'desc')
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
