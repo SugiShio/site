@@ -1,5 +1,1 @@
-export default {
-  user: state => {
-    return state.user
-  }
-}
+export default {}

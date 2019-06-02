@@ -3,9 +3,6 @@ import pkg from './package'
 export default {
   mode: 'universal',
   srcDir: 'app',
-  router: {
-    middleware: ['auth']
-  },
 
   /*
    ** Headers of the page
@@ -28,12 +25,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['element-ui/lib/theme-chalk/index.css', '~/assets/style/app.scss'],
+  css: ['~/assets/style/app.scss'],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '@/plugins/element-ui', ssr: false }],
+  plugins: [],
 
   /*
    ** Nuxt.js modules
@@ -53,8 +50,6 @@ export default {
    ** Build configuration
    */
   build: {
-    transpile: [/^element-ui/],
-
     /*
      ** You can extend webpack config here
      */

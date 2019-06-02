@@ -2,7 +2,21 @@
 .m-container
   header.m-header
     h1.m-header__title shoko-sugito.work
+  main
+    |{{data}}
 </template>
+
+<script>
+export default {
+  async asyncData({ store }) {
+    const data = await store.dispatch('getIndex', {
+      collection: 'articles'
+    })
+
+    return { data }
+  }
+}
+</script>
 
 <style lang="scss">
 @import '~/assets/style/_variables.scss';
