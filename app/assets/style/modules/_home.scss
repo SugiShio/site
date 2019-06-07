@@ -11,7 +11,7 @@
     }
   }
 
-  &__title {
+  &__siteTitle {
     font-size: 20px;
   }
 
@@ -40,6 +40,14 @@
       margin-top: 141.4vw;
       padding-top: 0;
       background-color: transparent;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-pagetitle;
+    color: $color-shioniro;
+    @media screen and (max-width: $bp-sp) {
+      color: #fff;
     }
   }
 }

@@ -1,0 +1,29 @@
+.m-articleList {
+  margin: 20px 0 10px;
+
+  &__item {
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    color: $color-kuro;
+
+    // @include link;
+  }
+
+  &__date {
+    font-family: $font-number;
+    display: inline-block;
+    min-width: 75px;
+    letter-spacing: 0.05em;
+    color: $color-fujiiro;
+  }
+
+  &__title {
+    flex: 1;
+    margin-left: 5px;
+  }
+}
