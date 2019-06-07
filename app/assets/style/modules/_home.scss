@@ -1,0 +1,45 @@
+.m-index {
+  @media screen and (max-width: $bp-sp) {
+    &::before {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: linear-gradient(-16.8deg, $color-fujiiro, $color-shioniro);
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    padding: 0 50px;
+    color: #fff;
+    background: linear-gradient(-16.8deg, $color-fujiiro, $color-shioniro);
+
+    @media screen and (max-width: $bp-sp) {
+      position: fixed;
+      top: 0;
+      height: 141.4vw;
+      background: transparent;
+    }
+  }
+
+  &__body {
+    padding: 80px 50px;
+    @media screen and (max-width: $bp-sp) {
+      position: relative;
+      margin-top: 141.4vw;
+      padding-top: 0;
+      background-color: transparent;
+    }
+  }
+}
