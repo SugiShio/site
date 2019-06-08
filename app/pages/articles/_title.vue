@@ -3,13 +3,15 @@ section
   article.m-article
     h2.m-article__title {{ data.title }}
     time.m-article__time {{ date }}
-    div.m-article__content {{ data.body }}
+    vue-markdown.m-article__content(:source='data.body')
 </template>
 
 <script>
 import { getShow } from '~/utils/firebase'
 import moment from 'moment'
+import VueMarkdown from 'vue-markdown'
 export default {
+  components: { VueMarkdown },
   async asyncData({ route }) {
     const data = await getShow({
       collection: 'articles',

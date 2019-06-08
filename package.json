@@ -37,6 +37,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "universal-cookie": "^4.0.0",
-    "vue-jest": "^3.0.3"
+    "vue-jest": "^3.0.3",
+    "vue-markdown": "^2.2.4"
   }
 }
