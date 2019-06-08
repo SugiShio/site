@@ -17,6 +17,7 @@ import { getIndex } from '~/utils/firebase'
 import articleListItem from '@/components/articleListItem.vue'
 
 export default {
+  layout: 'index',
   components: { articleListItem },
   async asyncData() {
     const data = await getIndex({ collection: 'articles' })

@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Neuton|EB+Garamond|Inconsolata');
 @import './_variables';
 @import './_reset';
+@import './_mixin';
+@import './_markdown';
 
 @import './modules/_layout';
+@import './modules/_article';
 @import './modules/_articleList';
+@import './modules/_header';
 @import './modules/_home';
