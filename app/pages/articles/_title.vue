@@ -1,9 +1,8 @@
 <template lang="pug">
-section
-  article.m-article
-    h2.m-article__title {{ data.title }}
-    time.m-article__time {{ date }}
-    vue-markdown.m-article__content(:source='data.body')
+article.m-article
+  h2.m-article__title {{ data.title }}
+  time.m-article__time {{ date }}
+  vue-markdown.m-article__content(:source='data.body')
 </template>
 
 <script>

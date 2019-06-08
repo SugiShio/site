@@ -8,10 +8,9 @@
   }
 
   &__link {
+    @include link;
     display: inline-flex;
     color: $color-kuro;
-
-    // @include link;
   }
 
   &__date {

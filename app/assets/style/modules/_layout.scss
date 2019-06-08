@@ -4,5 +4,12 @@
 }
 
 .m-main {
-  padding: 100px 50px 20px;
+  width: calc(100% - 40.1vh);
+  margin-left: 40.1vh;
+  padding: 100px 50px;
+}
+
+.m-footer {
+  font-size: 11px;
+  padding: 10px 0;
 }

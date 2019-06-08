@@ -1,6 +1,11 @@
 .m-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   flex-shrink: 0;
   width: 40.1vh;
+  height: 100vh;
   padding: 100px 30px 0;
   color: #fff;
   background: linear-gradient(-73.2deg, $color-fujiiro, $color-shioniro);

@@ -10,6 +10,7 @@
       :key='index'
       :item='item'
       )
+  footer.m-index__footer ©︎ 2019, Shoko Sugito
 </template>
 
 <script>
