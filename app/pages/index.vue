@@ -5,25 +5,22 @@
   main.m-index__body
     h2.m-index__title Articles
     ul.m-articleList
-      li.m-articleList__item(v-for='item in data')
-        a.m-articleList__link
-          time.m-articleList__date {{ date(item.createdAt) }}
-          .m-articleList__title {{ item.title }}
+      article-list-item(
+      v-for='(item, index) in data'
+      :key='index'
+      :item='item'
+      )
 </template>
 
 <script>
 import { getIndex } from '~/utils/firebase'
-import moment from 'moment'
+import articleListItem from '@/components/articleListItem.vue'
 
 export default {
+  components: { articleListItem },
   async asyncData() {
     const data = await getIndex({ collection: 'articles' })
     return { data }
-  },
-  methods: {
-    date(timestamp) {
-      return moment(timestamp).format('YYYY.M.D')
-    }
   }
 }
 </script>
