@@ -36,7 +36,10 @@ export const getShow = async ({ collection, doc }) => {
 
 const processData = obj => {
   Object.keys(obj).forEach(key => {
-    if (obj[key].constructor.name === 'Timestamp') {
+    if (
+      Number.isInteger(obj[key].seconds) &&
+      Number.isInteger(obj[key].nanoseconds)
+    ) {
       obj[key] = getTimestamp(obj[key])
     }
   })
