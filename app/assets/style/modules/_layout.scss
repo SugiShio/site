@@ -1,12 +1,18 @@
 .m-container {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .m-main {
-  width: calc(100% - 40.1vh);
-  margin-left: 40.1vh;
+  flex-grow: 1;
   padding: 100px 50px;
+
+  @include pc {
+    width: calc(100% - 40.1vh);
+    margin-left: 40.1vh;
+  }
 
   &__title {
     font-size: $font-size-pagetitle;
@@ -16,5 +22,9 @@
 
 .m-footer {
   font-size: 11px;
-  padding: 10px 0;
+  padding: 10px 50px 30px;
+
+  @include pc {
+    padding: 10px 0;
+  }
 }

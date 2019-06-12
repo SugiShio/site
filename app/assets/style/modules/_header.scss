@@ -1,14 +1,18 @@
 .m-header {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-shrink: 0;
-  width: 40.1vh;
-  height: 100vh;
-  padding: 100px 30px 0;
+  padding: 30px 50px 10px;
   color: #fff;
   background: linear-gradient(-73.2deg, $color-fujiiro, $color-shioniro);
+
+  @include pc {
+    position: fixed;
+    width: 40.1vh;
+    height: 100vh;
+    padding: 100px 30px 0;
+  }
 
   &__title {
     font-size: 16px;

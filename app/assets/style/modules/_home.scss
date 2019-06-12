@@ -1,5 +1,5 @@
 .m-index {
-  @media screen and (max-width: $bp-sp) {
+  @include sp {
     &::before {
       position: fixed;
       top: 0;
@@ -25,7 +25,7 @@
     color: #fff;
     background: linear-gradient(-16.8deg, $color-fujiiro, $color-shioniro);
 
-    @media screen and (max-width: $bp-sp) {
+    @include sp {
       position: fixed;
       top: 0;
       height: 141.4vw;
@@ -35,25 +35,28 @@
 
   &__body {
     padding: 80px 50px;
-    @media screen and (max-width: $bp-sp) {
+    @include sp {
       position: relative;
       margin-top: 141.4vw;
       padding-top: 0;
-      background-color: transparent;
     }
   }
 
   &__title {
     font-size: $font-size-pagetitle;
     color: $color-shioniro;
-    @media screen and (max-width: $bp-sp) {
+    @include sp {
       color: #fff;
     }
   }
 
   &__footer {
     font-size: 11px;
+    position: relative;
     padding: 10px 50px;
     color: $color-usuzumi;
+    @include sp {
+      color: #fff;
+    }
   }
 }
