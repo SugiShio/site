@@ -1,0 +1,21 @@
+.m-profile {
+  &__title {
+    font-size: 11px;
+    color: $color-usuzumi;
+    letter-spacing: 0.1em;
+  }
+
+  &__name {
+    margin: 10px 0;
+    font-size: 20px;
+    color: $color-sumi;
+    letter-spacing: 0.15em;
+  }
+
+  &__content {
+    margin: 50px 0;
+    p {
+      margin: 20px 0;
+    }
+  }
+}

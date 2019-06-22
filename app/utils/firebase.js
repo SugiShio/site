@@ -1,7 +1,7 @@
 import firebase from '~/plugins/firebase'
 
-export const getIndex = async ({ collection }) => {
-  let data = []
+export const getIndex = async ({ collection, isObject }) => {
+  let data = isObject ? {} : []
   await firebase
     .firestore()
     .collection(collection)
@@ -9,7 +9,8 @@ export const getIndex = async ({ collection }) => {
     .get()
     .then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        data.push(processData(doc.data()))
+        if (isObject) data[doc.id] = processData(doc.data())
+        else data.push(processData(doc.data(), doc.id))
       })
     })
     .catch(error => {
@@ -34,7 +35,7 @@ export const getShow = async ({ collection, doc }) => {
   return data
 }
 
-const processData = obj => {
+const processData = (obj, id) => {
   Object.keys(obj).forEach(key => {
     if (
       Number.isInteger(obj[key].seconds) &&
@@ -43,6 +44,7 @@ const processData = obj => {
       obj[key] = getTimestamp(obj[key])
     }
   })
+  if (id) obj = { ...obj, id }
   return obj
 }
 
