@@ -15,6 +15,21 @@
     font-size: 20px;
   }
 
+  &__menu {
+    margin-top: 40px;
+  }
+
+  &__menu-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__menu-link {
+    @include link(#fff);
+    display: inline-flex;
+    color: #fff;
+  }
+
   &__head {
     display: flex;
     justify-content: center;

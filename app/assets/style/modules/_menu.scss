@@ -10,7 +10,6 @@
 
   &__link[href] {
     @include link(#fff);
-    display: inline-flex;
     color: #fff;
   }
 }

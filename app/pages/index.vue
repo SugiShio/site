@@ -2,10 +2,10 @@
 .m-index
   header.m-index__head
     h1.m-index__siteTitle shoko-sugito.work
-    nav
+    nav.m-index__menu
       ul
-        li(v-for='item in menuItems')
-          a(:href='item.path') {{ item.label }}
+        li.m-index__menu-item(v-for='item in menuItems')
+          a.m-index__menu-link(:href='item.path') {{ item.label }}
   main.m-index__body
     h2.m-index__title Articles
     ul.m-articleList
