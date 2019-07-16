@@ -12,3 +12,14 @@ export const MENU_DEFAULT = [
     path: '/profile'
   }
 ]
+
+export const MENU_TOP = [
+  {
+    label: 'Articles',
+    path: '/articles'
+  },
+  {
+    label: 'Profile',
+    path: '/profile'
+  }
+]
