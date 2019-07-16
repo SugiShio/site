@@ -2,6 +2,7 @@
 section.m-container
   header.m-header
     router-link.m-header__title(to='/') shoko-sugito.work
+    m-menu
     footer.m-footer(v-if='!isSp') ©︎ 2019, Shoko Sugito
   main.m-main
     nuxt
@@ -9,7 +10,9 @@ section.m-container
 </template>
 
 <script>
+import mMenu from '@/components/menu/index.vue'
 export default {
+  components: { mMenu },
   computed: {
     isSp() {
       return this.$store.getters.deviceType === 'sp'
