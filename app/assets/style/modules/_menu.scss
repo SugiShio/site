@@ -1,0 +1,16 @@
+.m-menu {
+  flex-grow: 1;
+  margin-top: 50px;
+
+  &__item {
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__link[href] {
+    @include link(#fff);
+    display: inline-flex;
+    color: #fff;
+  }
+}

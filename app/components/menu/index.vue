@@ -1,7 +1,7 @@
 <template lang="pug">
-nav
+nav.m-menu
   ul
-    li(v-for='item in items')
+    li.m-menu__item(v-for='item in items')
       menuItem(:item='item')
 </template>
 
