@@ -1,5 +1,5 @@
 <template lang="pug">
-a(
+a.m-hamburger__link(
 :href='href'
 ) {{item.label}}
 </template>
