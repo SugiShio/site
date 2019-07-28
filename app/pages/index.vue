@@ -8,7 +8,7 @@
           a.m-index__menu-link(:href='item.path') {{ item.label }}
   main.m-index__body
     h2.m-index__title Articles
-    ul.m-articleList
+    ul.m-articleList.m-articleList--index
       article-list-item(
       v-for='(item, index) in data'
       :key='index'
