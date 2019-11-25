@@ -1,11 +1,11 @@
-export const MENU_DEFAULT = [
-  {
-    label: 'Top',
-    path: '/'
-  },
+export const MENU_TOP = [
   {
     label: 'Articles',
     path: '/articles'
+  },
+  {
+    label: 'Works',
+    path: '/works'
   },
   {
     label: 'Profile',
@@ -13,13 +13,10 @@ export const MENU_DEFAULT = [
   }
 ]
 
-export const MENU_TOP = [
+export const MENU_DEFAULT = [
   {
-    label: 'Articles',
-    path: '/articles'
+    label: 'Top',
+    path: '/'
   },
-  {
-    label: 'Profile',
-    path: '/profile'
-  }
+  ...MENU_TOP
 ]

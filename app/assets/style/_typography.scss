@@ -1,4 +1,22 @@
 @charset 'utf-8';
+@import './_variables';
+@import './_mixin';
+
+%title {
+  font-size: 24px;
+}
+
+%table {
+  th {
+    padding: 5px 0;
+    min-width: 100px;
+    color: $color-usuzumi;
+  }
+  td {
+    padding: 5px 0;
+    min-width: 100px;
+  }
+}
 
 %markdown {
   * {
@@ -24,7 +42,7 @@
     margin: 10px 0;
     code {
       font-size: 1.4rem;
-      line-height: .9;
+      line-height: 0.9;
       display: inline-block;
       padding: 5px;
       color: darken($color-fujiiro, 40%);
@@ -32,7 +50,7 @@
     }
   }
   img {
-    box-shadow: 0 1px 4px rgba($color-kuro, .1);
+    box-shadow: 0 1px 4px rgba($color-kuro, 0.1);
   }
   ul {
     margin: 10px 0;
@@ -44,7 +62,8 @@
     margin: 10px 0;
     border-top: 1px solid $color-usuzumi;
     border-bottom: 1px solid $color-usuzumi;
-    th, td {
+    th,
+    td {
       padding: 5px 30px 5px 0;
     }
     > thead {
@@ -62,7 +81,9 @@
     }
   }
   code {
-    font-family: 'Inconsolata', monospace, '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+    font-family: 'Inconsolata', monospace, '游ゴシック体', 'Yu Gothic', YuGothic,
+      'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
+      sans-serif;
   }
   pre {
     padding: 10px 15px;

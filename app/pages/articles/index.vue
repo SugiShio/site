@@ -11,7 +11,6 @@ section
 
 <script>
 import { getIndex } from '~/utils/firebase'
-import moment from 'moment'
 import articleListItem from '@/components/articleListItem.vue'
 export default {
   components: { articleListItem },
