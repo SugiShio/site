@@ -1,12 +1,15 @@
 import firebase from '~/plugins/firebase'
 
-export const getIndex = async ({ collection, isObject }) => {
+export const getIndex = async ({
+  collection,
+  isObject,
+  ignorePublishStatus
+}) => {
   let data = isObject ? {} : []
-  await firebase
-    .firestore()
-    .collection(collection)
-    .where('published', '==', true)
-    .orderBy('createdAt', 'desc')
+  const ref = firebase.firestore().collection(collection)
+  let query = ignorePublishStatus ? ref : ref.where('published', '==', true)
+  query = query.orderBy('createdAt', 'desc')
+  await query
     .get()
     .then(querySnapshot => {
       querySnapshot.forEach(doc => {

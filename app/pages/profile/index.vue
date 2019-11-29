@@ -12,7 +12,11 @@ import VueMarkdown from 'vue-markdown'
 export default {
   components: { VueMarkdown },
   async asyncData() {
-    const data = await getIndex({ collection: 'profiles', isObject: true })
+    const data = await getIndex({
+      collection: 'profiles',
+      isObject: true,
+      ignorePublishStatus: true
+    })
     return { data }
   }
 }
