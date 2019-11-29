@@ -7,14 +7,16 @@
 }
 
 %table {
-  th {
-    padding: 5px 0;
-    min-width: 100px;
-    color: $color-usuzumi;
-  }
+  th,
   td {
     padding: 5px 0;
     min-width: 100px;
+  }
+  th {
+    color: $color-usuzumi;
+  }
+  td {
+    @extend %markdown;
   }
 }
 

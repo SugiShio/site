@@ -1,7 +1,7 @@
 <template lang="pug">
 article.m-work
   h2.m-work__title {{ data.title }}
-  .m-work__featuredImage
+  .m-work__featuredImage(v-if='data.featuredImage')
     img(:src='data.featuredImage')
   table.m-work__table
     tbody
