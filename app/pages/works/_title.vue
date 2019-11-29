@@ -59,31 +59,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/style/_variables';
-@import '@/assets/style/_typography';
-.m-work {
-  &__title {
-    @extend %title;
-  }
-
-  &__featuredImage {
-    margin: 50px 0;
-  }
-
-  &__table {
-    @extend %table;
-    margin: 30px 0;
-  }
-
-  &__content {
-    @extend %markdown;
-    margin: 50px 0;
-  }
-
-  &__images {
-    margin: 50px 0;
-  }
-}
-</style>

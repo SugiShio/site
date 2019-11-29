@@ -28,23 +28,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/style/_variables';
-@import '@/assets/style/_typography';
-.m-article {
-  &__title {
-    @extend %title;
-  }
-
-  &__time {
-    font-family: $font-number;
-    color: $color-usuzumi;
-  }
-
-  &__content {
-    @extend %markdown;
-    margin-top: 80px;
-  }
-}
-</style>

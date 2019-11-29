@@ -16,10 +16,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.m-workList {
-  display: flex;
-  margin: 0 -20px;
-}
-</style>

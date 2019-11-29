@@ -42,13 +42,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.m-index {
-  &__section {
-    & + & {
-      margin-top: 150px;
-    }
-  }
-}
-</style>
