@@ -5,6 +5,7 @@ export const getIndex = async ({ collection, isObject }) => {
   await firebase
     .firestore()
     .collection(collection)
+    .where('published', '==', true)
     .orderBy('createdAt', 'desc')
     .get()
     .then(querySnapshot => {
