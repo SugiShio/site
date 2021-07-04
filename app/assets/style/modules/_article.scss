@@ -1,6 +1,6 @@
 .m-article {
   &__title {
-    font-size: 24px;
+    @extend %title;
   }
 
   &__time {

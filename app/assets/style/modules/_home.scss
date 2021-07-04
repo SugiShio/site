@@ -11,6 +11,12 @@
     }
   }
 
+  &__section {
+    & + & {
+      margin-top: 150px;
+    }
+  }
+
   &__siteTitle {
     font-size: 20px;
   }
